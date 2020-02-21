@@ -1,0 +1,37 @@
+.take-page {
+	width: 100%;
+	position: relative;
+}
+
+.take-page h1 {
+	text-align: center;
+	font-size: 2.5rem;
+}
+
+.take-box {
+	margin-top: 5%;
+	width: 30%;
+	margin-left: calc(50% - 270px);
+	border: 1px solid black;
+}
+
+.show-balance {
+	text-align: center;
+	font-size: 1.8rem;
+	margin-top: 10%;
+}
+
+.balance-text {
+	color: forestgreen;
+}
+
+.how-much {
+	text-align: center;
+	color: #cccc00;
+	margin-top: 10%;
+	font-size: 1.8rem;
+}
+
+.deposit-block {
+	display: block;
+}
