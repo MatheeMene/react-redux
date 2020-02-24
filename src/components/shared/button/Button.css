@@ -1,6 +1,6 @@
 .button {
 	background-color: white;
-  color: black;
+	color: black;
 	border: 2px solid red;
 	width: 50%;
 	margin-left: calc(50% - 135px);
@@ -10,4 +10,14 @@
 	font-size: 1.3rem;
 	cursor: pointer;
 	border-radius: 5px;
+	transition: .6s;
+}
+
+.button:focus {
+	outline: none;
+}
+
+.button:hover {
+	background-color: red;
+	color: white;
 }

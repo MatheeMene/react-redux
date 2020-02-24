@@ -1,14 +1,14 @@
-.deposit-page {
+.content-box-page {
 	width: 100%;
 	position: relative;
 }
 
-.deposit-page h1 {
+.content-box-page h1 {
 	text-align: center;
 	font-size: 2.5rem;
 }
 
-.deposit-box {
+.content-box {
 	margin-top: 5%;
 	width: 30%;
 	margin-left: calc(50% - 270px);
@@ -32,6 +32,6 @@
 	font-size: 1.8rem;
 }
 
-.deposit-block {
+.content-block {
 	display: block;
 }

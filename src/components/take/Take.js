@@ -1,37 +1,29 @@
 import React, { useState } from 'react';
-import Input from '../shared/input/Input';
-import Button from '../shared/button/Button';
-import './Take.css';
+import ContentBox from '../shared/contentBox/ContentBox';
 
 const Take = () => {
 
 	const [ balance, setBalance ] = useState('');
+	const [ currentBalance, setCurrenteBalance ] = useState('');
 
 	const handleChange = event => setBalance(event.target.value);
 
+	const handleSubmit = event => {
+
+		event.preventDefault();
+		setCurrenteBalance(currentBalance - balance);
+	}
+
 	return (
-		<div className='take-page'>
-			<div className='take-box'>
-
-				<h1>Take Here!</h1>
-				<p className='show-balance'><span className='balance-text'>Balance</span> R$ { balance === '' ? 0 : balance }</p>
-
-				<div className='deposit-block'>
-					<p className='how-much'>⇣How Much⇣</p>
-					<Input 
-						type={ 'text' }
-						name={ 'take' }
-						disabled={ false }
-						placeholder={ '5.00' }
-						onChange={ event => handleChange(event) }
-						value={ balance }
-					/>
-					<Button 
-						label={ 'Take Now' }
-					/>
-				</div>
-			</div>
-		</div>
+		<ContentBox 
+			pageLabel={ 'Take Here!' }
+			inputName={ 'take' }
+			buttonLabel={ 'Take Now' }
+			onChange={ handleChange }
+			onClick={ handleSubmit }
+			balance={ currentBalance }
+			showContent={ true }
+		/>
 	);
 };
 

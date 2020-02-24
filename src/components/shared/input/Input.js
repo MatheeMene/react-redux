@@ -7,7 +7,6 @@ const Input = ({
 	inputName,
 	disabled,
 	placeholder,
-	value,
 	onChange
 }) => (
 	<input
@@ -17,7 +16,6 @@ const Input = ({
 		disabled={ disabled }
 		placeholder={ placeholder }
 		onChange={ onChange }
-		value={ value }
 	/>
 );
 
@@ -26,7 +24,6 @@ Input.propTypes = {
 	inputName: string,
 	disabled: bool,
 	placeholder: string,
-	value: string,
 	onChange: func
 };
 
