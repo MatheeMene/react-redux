@@ -7,8 +7,8 @@ const Header = () => (
 		<Link to='/deposit'>
 			Deposit
 		</Link>
-		<Link to='/take'>
-			Take
+		<Link to='/withdraw'>
+			Withdraw
 		</Link>
 		<Link to='/view'>
 			View

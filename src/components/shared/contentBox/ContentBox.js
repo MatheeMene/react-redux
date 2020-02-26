@@ -11,19 +11,18 @@ const ContentBox = ({
 	onClick,
 	buttonLabel,
 	balance,
-	showContent
+	showInputs
 }) => (
 
 	<div className='content-box-page'>
 		<div className='content-box'>
 
 			<h1>{ pageLabel }</h1>
-			<p className='show-balance'><span className='balance-text'>Balance</span> R$ { balance === '' ? '0.00' : balance }</p>
-			{ showContent &&
+			<p className='show-balance'><span className='balance-text'>Balance</span> R$ { balance }</p>
+			{ showInputs &&
 				<div className='content-block'>
 					<p className='how-much'>⇣How Much⇣</p>
-					<Input 
-						type={ 'text' }
+					<Input
 						inputName={ inputName }
 						disabled={ false }
 						placeholder={ 'R$ 5.00' }

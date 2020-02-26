@@ -1,5 +1,5 @@
 const initialState = {
-    balance: 0
+    balance: 0.0
 };
 
 const reducer = (state = initialState, action) => {
@@ -11,5 +11,6 @@ const reducer = (state = initialState, action) => {
             return { balance: state.balance - action.payload }
         default: return state
     }
-
 }
+
+export default reducer;

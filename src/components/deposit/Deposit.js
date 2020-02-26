@@ -1,19 +1,25 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import ContentBox from '../shared/contentBox/ContentBox';
 
 const Deposit = () => {
 
-	const [ balance, setBalance ] = useState('');
-	const [ currentBalance, setCurrentBalance ] = useState('');
+	const dispatch = useDispatch();
+	const storeCurrentBalance = useSelector(state => state.balance);
 
-	const handleChange = event => {
-		setBalance(event.target.value);
-	}
+	const [ deposit, setDeposit ] = useState(0.0);
+	const [ currentBalance, setCurrentBalance ] = useState(storeCurrentBalance);
+
+	const handleChange = event => setDeposit(parseFloat(event.target.value));
 
 	const handleSubmit = event => {
 		event.preventDefault();
-		setCurrentBalance(balance);
-	}
+		dispatch({ type: 'DEPOSIT', payload: deposit });
+	};
+	
+	useEffect(() => {
+		setCurrentBalance(storeCurrentBalance);
+	}, [storeCurrentBalance]);
 
 	return (
 		<ContentBox
@@ -22,8 +28,8 @@ const Deposit = () => {
 			buttonLabel={ 'Deposit Now' }
 			onChange={ handleChange }
 			onClick={ handleSubmit }
-			balance={ currentBalance }
-			showContent={ true }
+			balance={ currentBalance.toFixed(2) }
+			showInputs={ true }
 		/>
 	);
 };

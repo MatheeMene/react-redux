@@ -1,30 +1,29 @@
 import React, { useState } from 'react';
 import ContentBox from '../shared/contentBox/ContentBox';
 
-const Take = () => {
 
-	const [ balance, setBalance ] = useState('');
+const Withdraw = () => {
+
+	const [ withdraw, setWithdraw ] = useState('');
 	const [ currentBalance, setCurrenteBalance ] = useState('');
 
-	const handleChange = event => setBalance(event.target.value);
+	const handleChange = event => setWithdraw(event.target.value);
 
 	const handleSubmit = event => {
-
 		event.preventDefault();
-		setCurrenteBalance(currentBalance - balance);
 	}
 
 	return (
 		<ContentBox 
-			pageLabel={ 'Take Here!' }
-			inputName={ 'take' }
-			buttonLabel={ 'Take Now' }
+			pageLabel={ 'Withdraw Here!' }
+			inputName={ 'Withdraw' }
+			buttonLabel={ 'Withdraw Now' }
 			onChange={ handleChange }
 			onClick={ handleSubmit }
 			balance={ currentBalance }
-			showContent={ true }
+			showInputs={ true }
 		/>
 	);
 };
 
-export default Take;
+export default Withdraw;

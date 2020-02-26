@@ -1,17 +1,16 @@
-import React, { useState } from 'react';
-import ContentBox from '../shared/contentBox/ContentBox';
+import React from 'react';
 import { useSelector } from 'react-redux';
+import ContentBox from '../shared/contentBox/ContentBox';
 
 const View = () => {
 
-	const balance1 = useSelector(state => state.balance);
-	const [ balance, setBalance ] = useState('');
+	const balance = useSelector(state => parseFloat(state.balance));
 
 	return (
 		<ContentBox 
 			pageLabel={ 'View Balance!' }
-			balance={ balance }
-			showContent={ false }
+			balance={ balance.toFixed(2) }
+			showInputs={ false }
 		/>
 	);
 }
