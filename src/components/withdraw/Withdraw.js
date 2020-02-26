@@ -1,17 +1,30 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import ContentBox from '../shared/contentBox/ContentBox';
-
 
 const Withdraw = () => {
 
-	const [ withdraw, setWithdraw ] = useState('');
-	const [ currentBalance, setCurrenteBalance ] = useState('');
+	const dispatch = useDispatch();
+	const storeCurrentBalance = useSelector(state => state.balance);
 
-	const handleChange = event => setWithdraw(event.target.value);
+	const [ withdraw, setWithdraw ] = useState('');
+	const [ currentBalance, setCurrentBalance ] = useState(storeCurrentBalance);
+
+	const handleChange = event => {
+		setWithdraw(parseFloat(event.target.value));
+	}
 
 	const handleSubmit = event => {
 		event.preventDefault();
-	}
+		dispatch({ 
+			type: 'WITHDRAW',
+			payload: withdraw
+		});
+	};
+
+	useEffect(() => {
+		setCurrentBalance(storeCurrentBalance);
+	}, [storeCurrentBalance]);
 
 	return (
 		<ContentBox 
@@ -20,7 +33,7 @@ const Withdraw = () => {
 			buttonLabel={ 'Withdraw Now' }
 			onChange={ handleChange }
 			onClick={ handleSubmit }
-			balance={ currentBalance }
+			balance={ currentBalance.toFixed(2) }
 			showInputs={ true }
 		/>
 	);

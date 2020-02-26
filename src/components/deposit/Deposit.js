@@ -14,7 +14,10 @@ const Deposit = () => {
 
 	const handleSubmit = event => {
 		event.preventDefault();
-		dispatch({ type: 'DEPOSIT', payload: deposit });
+		dispatch({
+			type: 'DEPOSIT',
+			payload: deposit
+		});
 	};
 	
 	useEffect(() => {
