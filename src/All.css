@@ -1,0 +1,5 @@
+html, #app, #app>div {
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(to bottom, #9b30ff, #9f29ff, #a221ff, #a615ff, #aa00ff);
+}

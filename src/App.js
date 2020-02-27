@@ -4,7 +4,7 @@ import Routes from './Routes.js';
 
 const App = () => (
   <Router>
-    <div className="App">
+    <div className='App'>
       <Routes />
     </div>
   </Router>

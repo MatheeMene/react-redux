@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import ContentBox from '../shared/contentBox/ContentBox';
+import { WITHDRAW } from '../../store/reducer';
 
 const Withdraw = () => {
 
@@ -17,7 +18,7 @@ const Withdraw = () => {
 	const handleSubmit = event => {
 		event.preventDefault();
 		dispatch({ 
-			type: 'WITHDRAW',
+			type: WITHDRAW,
 			payload: withdraw
 		});
 	};

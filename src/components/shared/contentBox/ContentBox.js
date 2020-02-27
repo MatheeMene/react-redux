@@ -18,7 +18,7 @@ const ContentBox = ({
 		<div className='content-box'>
 
 			<h1>{ pageLabel }</h1>
-			<p className='show-balance'><span className='balance-text'>Balance</span> R$ { balance }</p>
+			<p className='show-balance'>Balance: <span>R$ { balance } </span></p>
 			{ showInputs &&
 				<div className='content-block'>
 					<p className='how-much'>⇣How Much⇣</p>

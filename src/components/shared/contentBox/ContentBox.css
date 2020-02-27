@@ -1,33 +1,41 @@
+* {
+	font-family: 'sans-serif';
+}
+
 .content-box-page {
 	width: 100%;
-	position: relative;
 }
 
 .content-box-page h1 {
 	text-align: center;
 	font-size: 2.5rem;
+	color: white;
 }
 
 .content-box {
-	margin-top: 5%;
 	width: 30%;
+	margin-top: 5%;
 	margin-left: calc(50% - 270px);
-	border: 1px solid black;
+	margin-bottom: 3rem;
+	border-radius: 5px;
+	border: 2px solid white;
+	box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.75);
 }
 
 .show-balance {
 	text-align: center;
 	font-size: 1.8rem;
 	margin-top: 10%;
+	color: white;
 }
 
-.balance-text {
-	color: forestgreen;
+.show-balance span {
+	color: #90EE90;
 }
 
 .how-much {
 	text-align: center;
-	color: #cccc00;
+	color: #90d7ff;
 	margin-top: 10%;
 	font-size: 1.8rem;
 }

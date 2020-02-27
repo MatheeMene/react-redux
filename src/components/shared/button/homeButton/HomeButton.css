@@ -1,0 +1,17 @@
+.button-home {
+    border-radius: 5px;
+    border: 2px solid white;
+    background-color: #a615ff;
+    text-decoration: none;
+    color: white;
+    transition: .5s;
+}
+
+.button-home:focus {
+    outline: 0;
+}
+
+.button-home:hover {
+    background-color: white;
+    color: #a615ff;
+}
