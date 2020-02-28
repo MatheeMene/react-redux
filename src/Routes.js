@@ -6,7 +6,7 @@ const Header   = lazy(() => import('./components/shared/header/Header'));
 const Home     = lazy(() => import('./components/home/Home')); 
 const Deposit  = lazy(() => import('./components/deposit/Deposit'));
 const Withdraw = lazy(() => import('./components/withdraw/Withdraw'));
-const View     = lazy(() => import('./components/view/View'));
+const Balance  = lazy(() => import('./components/balance/Balance'));
 
 const Routes = () => (
   <Switch>
@@ -16,7 +16,7 @@ const Routes = () => (
         <Route exact path='/'         component={ Home }     />
         <Route exact path='/deposit'  component={ Deposit }  />
         <Route exact path='/withdraw' component={ Withdraw } />
-        <Route exact path='/view'     component={ View }     />
+        <Route exact path='/balance'  component={ Balance }  />
       </div>
     </Suspense>
   </Switch>

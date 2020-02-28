@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import ContentBox from '../shared/contentBox/ContentBox';
 import { DEPOSIT } from '../../store/reducer';
-import HomeButton from '../shared/button/homeButton/HomeButton';
 
 const Deposit = () => {
 
@@ -27,19 +26,15 @@ const Deposit = () => {
 	}, [storeCurrentBalance]);
 
 	return (
-		<>
-			<ContentBox
-				pageLabel={ 'Deposit Here!' }
-				inputName={ 'deposit' }
-				buttonLabel={ 'Deposit Now' }
-				onChange={ handleChange }
-				onClick={ handleSubmit }
-				balance={ currentBalance.toFixed(2) }
-				showInputs={ true }
-			/>
-			
-			<HomeButton style={{ marginLeft: '46%' }} />
-		</>
+		<ContentBox
+			pageLabel={ 'Deposit Here!' }
+			inputName={ 'deposit' }
+			buttonLabel={ 'Deposit Now' }
+			onChange={ handleChange }
+			onClick={ handleSubmit }
+			balance={ currentBalance.toFixed(2) }
+			showInputs={ true }
+		/>
 	);
 };
 

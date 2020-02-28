@@ -2,6 +2,7 @@ import { func, string } from 'prop-types';
 import React from 'react';
 import Button from '../button/Button';
 import Input from '../input/Input';
+import HomeButton from '../button/homeButton/HomeButton';
 import './ContentBox.css';
 
 const ContentBox = ({ 
@@ -35,6 +36,7 @@ const ContentBox = ({
 				</div>
 			}
 		</div>
+		<HomeButton style={{ marginLeft: '36%' }} />
 	</div>
 );
 

@@ -1,9 +1,10 @@
 import React from 'react';
+import './Home.css';
 
 const Home = () => (
-	
-	<div>
-		<h1>BANCO DA GALERA</h1>
+	<div className='home-bank'>
+		<h1>React Bank</h1>
+		<p>Choose your option to start</p>
 	</div>
 );
 

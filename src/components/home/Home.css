@@ -1,0 +1,18 @@
+.home-bank {
+
+}
+
+.home-bank h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: white;
+    margin-top: 5%;
+}
+
+.home-bank p {
+    color: white;
+}
+
+.home-bank h1, .home-bank p {
+    text-align: center;
+}

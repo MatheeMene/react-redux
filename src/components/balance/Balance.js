@@ -2,7 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import ContentBox from '../shared/contentBox/ContentBox';
 
-const View = () => {
+const Balance = () => {
 
 	const balance = useSelector(state => parseFloat(state.balance));
 
@@ -15,4 +15,4 @@ const View = () => {
 	);
 }
 
-export default View;
+export default Balance;

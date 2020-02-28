@@ -5,6 +5,9 @@
     text-decoration: none;
     color: white;
     transition: .5s;
+    padding: 1.5rem;
+    padding-left: 13rem;
+    padding-right: 13rem;
 }
 
 .button-home:focus {
@@ -13,5 +16,6 @@
 
 .button-home:hover {
     background-color: white;
+    border-color: #a615ff;
     color: #a615ff;
 }

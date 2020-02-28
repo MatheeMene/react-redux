@@ -1,3 +1,6 @@
+* {
+    font-family: 'sans-serif';
+}
 html, #app, #app>div {
     height: 100%;
     width: 100%;

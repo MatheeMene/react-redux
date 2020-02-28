@@ -10,8 +10,8 @@ const Header = () => (
 		<Link to='/withdraw'>
 			Withdraw
 		</Link>
-		<Link to='/view'>
-			View
+		<Link to='/balance'>
+			Balance
 		</Link>
 	</div>
 );
